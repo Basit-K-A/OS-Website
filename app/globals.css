@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-desktop: #7aabb5;
+  --color-desktop-deep: #5f919c;
+  --color-terminal: #141618;
+  --color-panel: rgba(20, 22, 26, 0.72);
+  --color-taskbar: #121316;
+  --color-accent: #5eead4;
+  --color-accent-pink: #f0a0c0;
+  --color-muted: #9ca3af;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--color-desktop);
+  color: #f3f4f6;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(94, 234, 212, 0.35);
+  color: #fff;
+}
+
+.terminal-glow {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 18px 50px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(94, 234, 212, 0.08);
+}
+
+.panel-glass {
+  background: var(--color-panel);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.2),
+    0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.desktop-window {
+  background: rgba(18, 20, 24, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.25),
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    0 0 32px rgba(94, 234, 212, 0.06);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.desktop-window--focused {
+  border-color: rgba(94, 234, 212, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(94, 234, 212, 0.2),
+    0 22px 55px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(94, 234, 212, 0.12);
+}
+
+.desktop-window--focused .window-resize-handle {
+  opacity: 1;
+}
+
+.window-resize-handle {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.desktop-window:hover .window-resize-handle {
+  opacity: 0.55;
+}
+
+.desktop-window--focused:hover .window-resize-handle,
+.desktop-window--focused .window-resize-handle:hover {
+  opacity: 1;
+}
+
+/* Larger readable text when a window is maximized */
+.window-body--maximized {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.window-body--maximized .panel-scroll {
+  font-size: 1rem;
+}
+
+.window-body--maximized h2 {
+  font-size: 1.5rem;
+}
+
+.window-body--maximized p,
+.window-body--maximized li,
+.window-body--maximized a,
+.window-body--maximized button {
+  font-size: 1rem;
+}
+
+.window-body--maximized .font-mono {
+  font-size: 0.9rem;
+}
+
+.terminal-output {
+  scroll-behavior: smooth;
+}
+
+/* Active window drag — pointer captured, no text selection */
+body.window-dragging,
+body.window-dragging * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  cursor: grabbing !important;
+}
+
+body.window-dragging::selection {
+  background: transparent;
+}
+
+.os-link {
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.os-link:hover {
+  color: var(--color-accent);
+  border-color: rgba(94, 234, 212, 0.35);
+  box-shadow: 0 0 12px rgba(94, 234, 212, 0.15);
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.panel-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(94, 234, 212, 0.35) transparent;
+}
+
+.panel-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.panel-scroll::-webkit-scrollbar-thumb {
+  background: rgba(94, 234, 212, 0.35);
+  border-radius: 4px;
+}
