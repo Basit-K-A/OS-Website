@@ -53,6 +53,21 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "Who I Am",
+    title: "Who I Am",
+    date: "2026-05-23",
+    excerpt:
+      "A Student at Wilfrid Laurier University and passionate employee at Waterloo Regional Health Network.",
+    body: [
+      "I’m a Computer Science student at Wilfrid Laurier University (WLU), currently building my foundation in software development, systems, and problem-solving.",
+      "I’m especially interested in how code translates into real-world tools—whether that’s backend systems, infrastructure, or interactive applications.",
+      "Outside of coursework, I spend a lot of time working on personal projects and experimenting with different technologies to expand beyond what’s taught in class.",
+      "I enjoy breaking problems down, figuring out how systems connect, and gradually turning ideas into working software.",
+      "Right now, I’m focused on improving my skills in backend development, cloud infrastructure, and building projects that feel closer to real industry systems.",
+      "Over time, I’m aiming to grow into a developer who can work on scalable, reliable software that actually gets used.",
+    ],
+  },
+  {
     id: "learning-building-growing",
     title: "Learning, Building, and Growing",
     date: "2026-05-23",
