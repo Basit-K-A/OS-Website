@@ -9,7 +9,7 @@ A single-page portfolio that mimics a minimalist Arch Linux / i3 desktop. Naviga
 - Tailwind CSS v4
 - Framer Motion
 
-Open https://minimialist-website.vercel.app/
+Open https://basitkhan.vercel.app/
 
 ## Terminal commands
 
