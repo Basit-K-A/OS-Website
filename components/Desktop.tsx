@@ -3,6 +3,7 @@
 import { AnimatePresence } from "framer-motion";
 import { useRef } from "react";
 import { DesktopIcons } from "@/components/DesktopIcons";
+import { MusicPlayer } from "@/components/MusicPlayer";
 import { SystemStatus } from "@/components/SystemStatus";
 import { Taskbar } from "@/components/Taskbar";
 import { DesktopWindow } from "@/components/window/DesktopWindow";
@@ -30,10 +31,12 @@ export function Desktop() {
             className="absolute inset-0 bg-center bg-cover"
             style={{ backgroundImage: "url(/khwallpaper.png)" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/35" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-black/10 to-black/15" />
         </div>
 
         <SystemStatus />
+
+        <MusicPlayer />
 
         <DesktopIcons onOpen={wm.openWindow} />
 

@@ -179,3 +179,37 @@ body.window-dragging::selection {
   background: rgba(94, 234, 212, 0.35);
   border-radius: 4px;
 }
+
+.music-player {
+  border-radius: 4px;
+}
+
+.music-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+}
+
+.music-range::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+}
+
+.music-range::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 9999px;
+}
+
+.music-range::-moz-range-track {
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+}

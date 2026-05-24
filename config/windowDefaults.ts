@@ -29,7 +29,7 @@ export const WINDOW_DEFINITIONS: WindowDefinition[] = [
     title: "projects — ~/repos",
     icon: "⌂",
     defaultSize: { width: 400, height: 400 },
-    anchor: { x: 0.12, y: 0.38 },
+    anchor: { x: 0.52, y: 0.38 },
   },
   {
     id: "blog",
