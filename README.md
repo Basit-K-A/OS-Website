@@ -17,6 +17,6 @@ Open https://basitkhan.vercel.app/
 - `help` — list commands
 - `clear` — reset terminal output
 - Press `/` to focus the input
-<img width="1919" height="923" alt="image" src="https://github.com/user-attachments/assets/3ee1cec2-f600-4586-8479-19beda7add0d" />
-<img width="1917" height="917" alt="image" src="https://github.com/user-attachments/assets/fa77c63e-186c-498d-bc51-95afc20ce25b" />
+<img width="1914" height="918" alt="image" src="https://github.com/user-attachments/assets/bf1a8765-756f-4d55-8221-0ba121d9717d" />
+<img width="1915" height="913" alt="image" src="https://github.com/user-attachments/assets/a306f7bb-3303-4dd1-8e3b-29382be08e9b" />
 
