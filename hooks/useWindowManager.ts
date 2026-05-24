@@ -28,7 +28,7 @@ function buildInitialWindows(viewport: ViewportSize): Record<WindowId, WindowSta
     record[def.id] = {
       id: def.id,
       title: def.title,
-      open: def.id === "terminal",
+      open: def.id === "terminal" || def.id === "about",
       minimized: false,
       maximized: false,
       position,
@@ -47,7 +47,7 @@ export function useWindowManager(viewport: ViewportSize) {
       viewport.width > 0 ? viewport : { width: 1280, height: 720 },
     ),
   );
-  const [focusedId, setFocusedId] = useState<WindowId | null>("terminal");
+  const [focusedId, setFocusedId] = useState<WindowId | null>("about");
   const topZ = useRef(20);
   const initialized = useRef(false);
 

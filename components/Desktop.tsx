@@ -29,7 +29,7 @@ export function Desktop() {
         <div className="absolute inset-0" aria-hidden>
           <div
             className="absolute inset-0 bg-center bg-cover"
-            style={{ backgroundImage: "url(/khwallpaper.png)" }}
+            style={{ backgroundImage: "url(/darkwallpaper.png)" }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-black/10 to-black/15" />
         </div>

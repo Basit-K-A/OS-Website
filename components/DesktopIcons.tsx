@@ -25,10 +25,10 @@ export function DesktopIcons({ onOpen }: DesktopIconsProps) {
           onDoubleClick={() => open(item.id)}
           className="group flex w-16 flex-col items-center gap-1 rounded-md p-1 text-center transition hover:bg-white/10"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-black/30 font-mono text-sm text-[var(--color-accent)] shadow-lg backdrop-blur-sm">
+          <span className="flex h-13 w-13 items-center justify-center rounded-md border border-white/20 bg-black/30 font-mono text-sm text-[var(--color-accent)] shadow-lg backdrop-blur-sm">
             {item.icon}
           </span>
-          <span className="font-mono text-[10px] text-white/90 group-hover:text-[var(--color-accent)]">
+          <span className="font-mono text-[13px] text-white/90 group-hover:text-[var(--color-accent)]">
             {item.id}
           </span>
         </button>

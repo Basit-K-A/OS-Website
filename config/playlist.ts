@@ -1,19 +1,16 @@
 export const MUSIC_FOLDER = "/Music";
 
 /** First track on load; remaining tracks play in shuffled order. */
-export const START_TRACK = "10. Kairi.mp3";
+export const START_TRACK = "01. Dearly Beloved.mp3";
 
 export const PLAYLIST = [
-  "09. Tension Rising.mp3",
+  "01. Dearly Beloved.mp3",
   "10. Kairi.mp3",
-  "11. Missing You.mp3",
-  "12. The 13th Struggle.mp3",
   "13. Roxas.mp3",
   "14. Sora.mp3",
   "15. The Afternoon Streets.mp3",
   "16. Working Together.mp3",
   "17. Friends in My Heart.mp3",
-  "18. Magical Mystery.mp3",
 ] as const;
 
 export type TrackFilename = (typeof PLAYLIST)[number];
