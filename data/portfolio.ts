@@ -2,6 +2,7 @@ export const siteConfig = {
   osName: "portfolioOS",
   user: "portfolio",
   hostname: "portfolio",
+  webringMember: "basit-khan",
   github: "https://github.com/Basit-K-A",
   linkedin: "https://www.linkedin.com/in/basit-khan-202616247/",
   instagram: "https://www.instagram.com/basit.o55/",

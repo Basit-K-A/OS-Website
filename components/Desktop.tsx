@@ -6,6 +6,7 @@ import { DesktopIcons } from "@/components/DesktopIcons";
 import { MusicPlayer } from "@/components/MusicPlayer";
 import { SystemStatus } from "@/components/SystemStatus";
 import { Taskbar } from "@/components/Taskbar";
+import { WebringWidget } from "@/components/WebringWidget";
 import { DesktopWindow } from "@/components/window/DesktopWindow";
 import { WindowContent } from "@/components/window/WindowContent";
 import { WindowManagerProvider } from "@/components/window/WindowManagerContext";
@@ -35,6 +36,8 @@ export function Desktop() {
         </div>
 
         <SystemStatus />
+
+        <WebringWidget />
 
         <MusicPlayer />
 
