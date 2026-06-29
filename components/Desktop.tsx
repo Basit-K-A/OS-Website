@@ -40,9 +40,9 @@ export function Desktop() {
 
         <SystemStatus />
 
-        <div className="pointer-events-none absolute right-4 top-4 z-20 flex flex-col items-end gap-2">
+        <div className="absolute right-4 top-4 z-20 flex flex-col items-end gap-2">
+          <WebringWidget className="relative" />
           <NonDesktopVersionButton />
-          <WebringWidget />
         </div>
 
         <MusicPlayer />

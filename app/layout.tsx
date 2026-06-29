@@ -49,10 +49,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://webring.ca" />
       </head>
-      <body className="h-full antialiased">
-        {children}
-        <script src="https://webring.ca/embed.js" defer />
-      </body>
+      <body className="h-full antialiased">{children}</body>
     </html>
   );
 }

@@ -65,6 +65,60 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "building-aster",
+    slug: "building-aster",
+    title: "Building Aster: A Stack-Based Language and VM",
+    date: "2026-06-24",
+    modified: "2026-06-24",
+    excerpt:
+      "Designing a custom programming language and stack-based virtual machine in C++ from the ground up.",
+    tags: ["Aster", "C++", "Compilers", "Virtual Machine", "Basit Khan"],
+    readingTimeMinutes: 3,
+    body: [
+      "Aster started as a question I kept coming back to: what would it take to build a programming language that I actually understand end to end—not just the syntax, but the full path from source code to execution?",
+      "The project is a custom programming language paired with a stack-based virtual machine, both written in C++. Instead of treating the compiler and runtime as black boxes, I wanted to own every layer: parsing, bytecode generation, stack operations, and how values move through the system at runtime.",
+      "A stack-based VM felt like the right starting point. The execution model is simple enough to reason about while still forcing real design decisions—how functions call each other, how memory is represented, and how errors surface when the stack is in an invalid state.",
+      "Working in C++ added another layer of learning. Managing memory, structuring modules cleanly, and keeping the codebase maintainable as features grow has been as educational as the language design itself.",
+      "Aster is still evolving, but it has already changed how I think about other languages and runtimes. When you build the machine that runs the code, every abstraction elsewhere starts to make more sense.",
+    ],
+  },
+  {
+    id: "building-vectordb",
+    slug: "building-vectordb",
+    title: "Building VectorDB: Semantic Search From Scratch",
+    date: "2026-06-10",
+    modified: "2026-06-10",
+    excerpt:
+      "A custom vector database with embedding storage, ANN indexing, metadata filtering, and RAG-powered retrieval.",
+    tags: ["VectorDB", "RAG", "Semantic Search", "Backend", "Basit Khan"],
+    readingTimeMinutes: 3,
+    body: [
+      "As more applications lean on embeddings and retrieval-augmented generation, I wanted to understand what happens underneath managed vector databases—not just how to call an API, but how vectors are stored, indexed, and searched efficiently.",
+      "VectorDB is a custom retrieval engine built from scratch. It handles embedding storage, approximate nearest neighbour (ANN) indexing, metadata filtering, and document retrieval workflows suited to RAG-style applications.",
+      "The interesting part was balancing correctness with performance. Semantic search only matters if results are relevant, but speed still counts when you are iterating on a project locally or serving queries in real time. Building ANN indexing myself made the trade-offs tangible: recall, latency, and memory all pull in different directions.",
+      "Metadata filtering was another piece I cared about. In practice, vector search rarely stands alone—you want to narrow results by tags, sources, or document properties before ranking by similarity. Wiring that into the retrieval pipeline made the tool feel closer to something you would actually use.",
+      "This project pushed my backend and systems thinking further than a tutorial ever could. It also gave me a much clearer picture of how modern AI applications connect search, storage, and generation into one workflow.",
+    ],
+  },
+  {
+    id: "building-mini-it-platform",
+    slug: "building-mini-it-platform",
+    title: "Building the Mini IT Platform",
+    date: "2026-05-28",
+    modified: "2026-05-28",
+    excerpt:
+      "A containerized FastAPI platform for infrastructure management, security monitoring, and cloud deployment.",
+    tags: ["Mini IT Platform", "FastAPI", "Docker", "Infrastructure", "Basit Khan"],
+    readingTimeMinutes: 3,
+    body: [
+      "The Mini IT Platform grew out of a simple goal: build something that feels like real infrastructure software, not just a single-feature demo. I wanted a project that touched backend engineering, deployment, monitoring, and day-to-day IT operations in one place.",
+      "The platform is containerized and built around FastAPI on the backend, with a focus on infrastructure management, security monitoring, and cloud deployment workflows. Docker ties the services together so the environment is reproducible whether I am developing locally or preparing for deployment.",
+      "One of the biggest lessons was thinking in systems instead of endpoints. IT platforms are not just CRUD APIs—they need logging, health checks, service boundaries, and a structure that can grow without turning into spaghetti. Designing with containers early helped enforce that mindset.",
+      "Security monitoring added another layer of realism. Even in a small project, asking what should be tracked, how alerts are surfaced, and where sensitive data lives makes you design more carefully.",
+      "Mini IT Platform is one of the projects that pushed me closest to industry-style backend work: multiple concerns, real deployment constraints, and software meant to stay running—not just compile once and forget.",
+    ],
+  },
+  {
     id: "Who I Am",
     slug: "who-i-am",
     title: "Who I Am",

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { WebringWidget } from "@/components/WebringWidget";
 import { DesktopVersionLink } from "@/components/view/DesktopVersionLink";
 import { siteConfig } from "@/data/portfolio";
 import { SiteNav } from "@/components/seo/SiteNav";
@@ -34,6 +35,8 @@ export function SeoPageShell({ children }: SeoPageShellProps) {
           <SiteNav />
         </div>
       </footer>
+
+      <WebringWidget className="fixed bottom-4 right-4 z-20" />
     </div>
   );
 }
