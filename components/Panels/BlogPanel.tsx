@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { blogPosts, type BlogPost } from "@/data/portfolio";
+import { blogSlug } from "@/lib/blog";
 
 function BlogPostView({
   post,
@@ -29,6 +31,12 @@ function BlogPostView({
         <time className="mt-1 block font-mono text-[10px] text-gray-500">
           {post.date}
         </time>
+        <Link
+          href={`/blog/${blogSlug(post)}`}
+          className="mt-2 inline-block font-mono text-[10px] text-[var(--color-accent)] os-link"
+        >
+          Read full post →
+        </Link>
       </header>
       <div className="space-y-3 border-t border-white/10 pt-3">
         {post.body?.map((paragraph, index) => (

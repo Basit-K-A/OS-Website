@@ -6,13 +6,20 @@ export const siteConfig = {
   github: "https://github.com/Basit-K-A",
   linkedin: "https://www.linkedin.com/in/basit-khan-202616247/",
   instagram: "https://www.instagram.com/basit.o55/",
+  email: "khan8019@mylaurier.ca",
   name: "Basit Khan",
   title: "Software Engineer",
+  jobTitle: "Computer Science Student",
   tagline: "Building clean systems with a terminal-first mindset.",
+  university: {
+    name: "Wilfrid Laurier University",
+    shortName: "WLU",
+    url: "https://www.wlu.ca/",
+  },
 };
 
 export const about = {
-  bio: `Hello, I'm ${siteConfig.name}, a ${siteConfig.title.toLowerCase()} focused on minimal interfaces, reliable backends, and developer experience. I treat every project like a well-configured Linux box: small surface area, sharp tools, predictable behavior.`,
+  bio: `Hello, I'm ${siteConfig.name}, a ${siteConfig.jobTitle.toLowerCase()} at ${siteConfig.university.name} (${siteConfig.university.shortName}) and aspiring ${siteConfig.title.toLowerCase()} focused on minimal interfaces, reliable backends, and developer experience. I treat every project like a well-configured Linux box: small surface area, sharp tools, predictable behavior.`,
   stack: [
     "TypeScript",
     "React",
@@ -45,9 +52,13 @@ export const projects = [
 
 export type BlogPost = {
   id: string;
+  slug?: string;
   title: string;
   date: string;
+  modified?: string;
   excerpt: string;
+  tags?: string[];
+  readingTimeMinutes?: number;
   /** Full post paragraphs — omit for “coming soon” list-only entries */
   body?: string[];
 };
@@ -55,10 +66,14 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     id: "Who I Am",
+    slug: "who-i-am",
     title: "Who I Am",
     date: "2026-05-23",
+    modified: "2026-05-23",
     excerpt:
       "A Student at Wilfrid Laurier University and passionate employee at Waterloo Regional Health Network.",
+    tags: ["Computer Science", "WLU", "Career", "Basit Khan"],
+    readingTimeMinutes: 2,
     body: [
       "I’m a Computer Science student at Wilfrid Laurier University (WLU), currently building my foundation in software development, systems, and problem-solving.",
       "I’m especially interested in how code translates into real-world tools—whether that’s backend systems, infrastructure, or interactive applications.",
@@ -70,10 +85,14 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "learning-building-growing",
+    slug: "learning-building-growing",
     title: "Learning, Building, and Growing",
     date: "2026-05-23",
+    modified: "2026-05-23",
     excerpt:
       "From Linux curiosity to programming, why I keep building and exploring.",
+    tags: ["Software Engineering", "Learning", "Linux", "Basit Khan"],
+    readingTimeMinutes: 2,
     body: [
       "I've always been drawn to learning whether it was understanding how computers worked, exploring Linux systems, or figuring out why certain technologies are built the way they are. That curiosity eventually led me into programming, where every project became an opportunity to solve problems and learn something new.",
       "What started as experimenting with code quickly turned into a genuine passion for building. I enjoy creating systems that are both functional and meaningful, from backend applications and infrastructure tools to interactive interfaces inspired by the software I use every day. For me, coding is more than just writing software — it's a constant process of growth, creativity, and discovery.",

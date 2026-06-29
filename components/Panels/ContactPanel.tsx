@@ -3,7 +3,7 @@
 import { siteConfig } from "@/data/portfolio";
 
 const links = [
-  { label: "Email", value: "khan8019@mylaurier.ca"},
+  { label: "Email", value: siteConfig.email, href: `mailto:${siteConfig.email}` },
   { label: "GitHub", value: "github.com/Basit-K-A", href: siteConfig.github },
   { label: "LinkedIn", value: "linkedin.com", href: siteConfig.linkedin },
   { label: "Instagram", value: "instagram.com", href: siteConfig.instagram },
@@ -27,8 +27,8 @@ export function ContactPanel() {
             <span className="w-20 text-[var(--color-accent-pink)]">{link.label}</span>
             <a
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={link.label === "Email" ? undefined : "_blank"}
+              rel={link.label === "Email" ? undefined : "noopener noreferrer"}
               className="truncate text-[var(--color-accent)] os-link"
             >
               {link.value}

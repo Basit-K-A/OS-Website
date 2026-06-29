@@ -7,6 +7,7 @@ import { MusicPlayer } from "@/components/MusicPlayer";
 import { SystemStatus } from "@/components/SystemStatus";
 import { Taskbar } from "@/components/Taskbar";
 import { WebringWidget } from "@/components/WebringWidget";
+import { NonDesktopVersionButton } from "@/components/view/NonDesktopVersionButton";
 import { DesktopWindow } from "@/components/window/DesktopWindow";
 import { WindowContent } from "@/components/window/WindowContent";
 import { WindowManagerProvider } from "@/components/window/WindowManagerContext";
@@ -27,17 +28,22 @@ export function Desktop() {
   return (
     <WindowManagerProvider value={wm}>
       <div className="relative h-dvh w-full overflow-hidden">
-        <div className="absolute inset-0" aria-hidden>
+        <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-center bg-cover"
             style={{ backgroundImage: "url(/darkwallpaper.png)" }}
+            role="img"
+            aria-label="Desktop wallpaper for Basit Khan portfolio"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-black/10 to-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-black/10 to-black/15" aria-hidden />
         </div>
 
         <SystemStatus />
 
-        <WebringWidget />
+        <div className="pointer-events-none absolute right-4 top-4 z-20 flex flex-col items-end gap-2">
+          <NonDesktopVersionButton />
+          <WebringWidget />
+        </div>
 
         <MusicPlayer />
 
